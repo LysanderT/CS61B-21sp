@@ -17,4 +17,14 @@ public class SquarePrimesTest {
         assertEquals("14 -> 15 -> 16 -> 289 -> 18", lst.toString());
         assertTrue(changed);
     }
+
+    @Test
+    public void test1(){
+        IntList lst = IntList.of(1,2,3,4,5);
+        boolean changed = IntListExercises.squarePrimes(lst);
+        assertEquals("1 -> 4 -> 9 -> 4 -> 25", lst.toString());
+        assertTrue(changed);
+        // Actual: "1 -> 4 -> 3 -> 4 -> 5"
+        // has found the problem: short circuit evaluation
+    }
 }
